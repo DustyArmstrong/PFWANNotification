@@ -5,7 +5,6 @@
 #Script by Dusty
 
 currentwanip=$(cat /tmp/pppoe0_ip)
-echo "$currentwanip" > /tmp/old_wan_ip
 
 oldwanip=$(cat /tmp/old_wan_ip)
 
@@ -21,5 +20,5 @@ if [ $currentwanip = $oldwanip ]; then
 else
   # Send the email notification then update old IP
   printf "$message" | /usr/local/bin/mail.php -s="$subject"
-  echo $currentwanip > /tmp/old_wan_ip
+  echo "$currentwanip" > /tmp/old_wan_ip
 fi
