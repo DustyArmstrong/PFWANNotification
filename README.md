@@ -1,6 +1,6 @@
 # PFWANNotification
 
-**Requires CRON**
+**_Requires CRON_**
 
 PFsense WAN IP Change Notification Script
 
